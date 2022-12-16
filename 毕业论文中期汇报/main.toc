@@ -1,0 +1,17 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Timeline}{2}{0}{1}
+\beamer@sectionintoc {2}{Objective}{4}{0}{2}
+\beamer@sectionintoc {3}{Prerequisites}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{ARMA Model}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Order Determination of ARMA Model}{10}{0}{3}
+\beamer@subsectionintoc {3}{3}{Characteristics of Finantial Time Series}{11}{0}{3}
+\beamer@subsectionintoc {3}{4}{ARCH Model}{12}{0}{3}
+\beamer@subsectionintoc {3}{5}{GARCH Family Models}{13}{0}{3}
+\beamer@sectionintoc {4}{Real Data Analysis}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{Data Selection}{16}{0}{4}
+\beamer@subsectionintoc {4}{2}{Exploration Data Analysis}{17}{0}{4}
+\beamer@subsectionintoc {4}{3}{Modelling Methods}{22}{0}{4}
+\beamer@subsectionintoc {4}{4}{Innovation distribution}{23}{0}{4}
+\beamer@subsectionintoc {4}{5}{Conclusion}{25}{0}{4}
+\beamer@subsectionintoc {4}{6}{Residuals Analysis}{26}{0}{4}
+\beamer@subsectionintoc {4}{7}{Discussions}{28}{0}{4}

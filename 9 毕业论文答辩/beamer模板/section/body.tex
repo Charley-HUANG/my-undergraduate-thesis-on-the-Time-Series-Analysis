@@ -1,0 +1,79 @@
+% 封面
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+% 目录
+\begin{frame}{Content}
+  \tableofcontents
+\end{frame}
+
+
+% 在开头与每个小节导入带强调的目录, 需要编译两遍！
+% 目录以 Section &  Subsection 指出
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+
+
+% 先验知识
+\section{Prerequsite knowledge}
+\subsection{GARCH Family Models}
+\begin{frame}{GARCH Model}
+  \begin{block}{GARCH ($p,q$) \cite{bollerslev1986_garch}}
+    Series $\left\{a_{t}\right\}$ follows a GARCH ($p,q$) model if
+    \begin{displaymath}
+			\begin{array}{c}
+				a_{t}=\sigma_{t | t-1}\varepsilon_{t},\\
+				\sigma_{t | t-1}^2 = \omega+\sum_{i=1}^q{\alpha_{i}a_{t-i}^2} + \sum_{j=1}^p{\beta_{j}\sigma_{t-j | t-j-1}^2},  
+			\end{array}
+		\end{displaymath}
+		where $\{a_{t}\}$ is a zero mean time series, $\omega > 0$, $\alpha_{i} \geq 0$, $\beta_{j} \geq 0$ for $i>0$, $j>0$. ${\left\{\varepsilon_{t}\right\}}$ is a sequence of i.i.d. random variables with mean zero and variance one.
+  \end{block}
+  \begin{itemize}
+    \item Note that p is the order of GARCH part, q is the order of ARCH part.
+    \item GARCH($p, q$) for $a_{t}$ implies \red{ARMA($\max(p,q)$, $p$)} for $a_{t}^2$.
+    \item \red{$\sum_{i=1}^{q}\alpha_{i}+\sum_{i=1}^{p}\beta_{i}<1$}, under the assumption of finite variance. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{GARCH Model Cont' d}
+  \small{
+  \begin{block}{IGARCH($1,1$) \cite{engle1986_igarch}}
+    Series $\left\{a_{t}\right\}$ follows an integrated GARCH($1,1$) model if
+    \begin{displaymath}
+      \begin{array}{c} % 两行的公式用array环境！
+        a_{t}=\sigma_{t \mid t-1} \varepsilon_{t}, \\
+        \sigma_{t \mid t-1}^{2}=\alpha_{0}+\beta_{1}\sigma_{t-1 \mid t-2}^2+\red{(1-\beta_{1})}a_{t-1}^{2}
+      \end{array}
+    \end{displaymath}
+    The unconditional variance of $a_{t}$ is not defined.
+  \end{block}
+  
+  \begin{block}{TGARCH$(p,q)$ \cite{zakoian1994_tgarch}}
+    Series $\left\{a_{t}\right\}$ follows an threshold GARCH ($p,q$) model if
+    \begin{displaymath}
+      \begin{array}{c}
+        \sigma_{t \mid t-1}^{2}=\alpha_{0}+\sum_{i=1}^{q}\left(\alpha_{i}\red{+\gamma_{i} N_{t-i}}\right) a_{t-i}^{2}+\sum_{j=1}^{p} \beta_{j} \sigma_{t-j \mid t-j-1}^{2},\\
+        N_{t-i}=\left\{\begin{array}{ll}
+          1 & \text { if } a_{t-i}<0 \\
+          0 & \text { if } a_{t-i} \geq 0
+          \end{array}\right.
+      \end{array}
+    \end{displaymath}
+    From the model, a positive $a_{t-i}$ contributes $\alpha_{i}a_{t-i}^2$ to $\sigma_{t \mid t-1}^2$, whereas a negative $a_{t-i}$ has a larger impact $(\alpha_{i}+\gamma_{i})a_{t-i}^2$ with $\gamma_{i}>0$.
+  \end{block}}
+\end{frame}
+
+
+%----------- REFERENCES  -------------
+%----------- No editing in references section ----------
+%----------- edit only in References.bib ----------
+	\begin{frame}[allowframebreaks]{References}
+		\bibliography{section/references}
+	\end{frame}

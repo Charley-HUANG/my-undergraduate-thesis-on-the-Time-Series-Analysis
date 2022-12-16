@@ -1,0 +1,12 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Prerequsite knowledge}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{GARCH Family Models}{3}{0}{1}
+\beamer@sectionintoc {2}{Background and Object}{6}{0}{2}
+\beamer@sectionintoc {3}{Empirical study}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Dataset}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Research scheme}{11}{0}{3}
+\beamer@subsectionintoc {3}{3}{Estimation result}{12}{0}{3}
+\beamer@subsectionintoc {3}{4}{Residual and prediction}{13}{0}{3}
+\beamer@sectionintoc {4}{Discussion and conclusion}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{Discussion}{15}{0}{4}
+\beamer@subsectionintoc {4}{2}{Conclusion}{16}{0}{4}

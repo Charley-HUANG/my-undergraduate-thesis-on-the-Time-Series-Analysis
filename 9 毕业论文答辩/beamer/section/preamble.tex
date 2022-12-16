@@ -1,0 +1,85 @@
+%-------- theme -------- 
+\usetheme{Madrid} % 详见：https://hartwork.org/beamer-theme-matrix/
+
+
+%-------- color --------
+\definecolor{sustechgreen}{RGB}{0,63,57} % 定义颜色与名字 \definecolor{name}{mode}{paras.} 查看颜色：https://www.rapidtables.com/web/color/RGB_Color.html
+\usecolortheme[named=sustechgreen]{structure} % 修改结构（主题）色
+
+
+%-------- set color of 'example block' to crimson theme --------%不动他
+\setbeamercolor{block body example}{bg=white}
+\setbeamercolor{block title example}{fg=white, bg=sustechgreen}
+
+
+%-------- font --------
+\setbeamerfont{structure}{family=\rmfamily,series=\bfseries}
+\usefonttheme[stillsansseriftext]{structurebold}
+\setbeamerfont{section in head/foot}{size=\tiny}
+
+
+%-------- misc structure --------
+% \useoutertheme[footline=authortitle,subsection=false]{miniframes} % 这个控制了每页header的目录，一般注释掉
+\useoutertheme[footline=authortitle]{} % 见：http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+\useinnertheme{rounded}
+\addtobeamertemplate{block begin}{}{\justifying}
+\newtheorem{remark}[theorem]{Remark}
+\renewcommand{\indent}{\hspace*{2em}}
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered] % 加caption就用这个
+% \usepackage[justification=centering]{caption} % caption在beamer不需要引
+
+%-------- packages to be used -------
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm}
+\usepackage{graphicx,comment}
+\usepackage{mathrsfs} 
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage[english]{babel} % 引用，修改为bibtex形式
+	\bibliographystyle{unsrt}
+\usepackage{rotating}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{threeparttable} %表格尾注
+% \usepackage{color} %文字颜色
+\usepackage[dvipsnames]{xcolor} %文字颜色: https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX#Named_colours_provided_by_the_xcolor_package
+	\newcommand{\nb}[1]{\textcolor{NavyBlue}{#1}}
+	\newcommand{\red}[1]{\textcolor{Red}{#1}}
+	\newcommand{\gre}[1]{\textcolor{Green}{#1}}
+% \usepackage[utf8x]{inputenc}
+\usepackage[UTF8, scheme = plain]{ctex} % Menu里的compiler要改成XeLaTeX。
+
+
+%-------- for bibliography -----------------
+\usepackage[super,square,sort]{natbib}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{frametitle continuation}{\frametitle{\color{white}List of References}}
+
+
+%-------- SUSTech Backgound --------- 定义每页的水印
+\usebackgroundtemplate{%
+	\tikz[overlay,remember picture] \node[opacity=0.03, at=(current page.center)] {
+		\includegraphics[height=4in,width=4in]{./Figures/sustech circle logo.png}};
+}
+
+
+%---------START EDITING HERE---------------------
+\title[Final defence]{An empirical analysis of the Chinese stock market indexes by ARMA-GARCH models}
+
+\author[Qiuyi HUANG]{\normalsize Qiuyi HUANG}
+
+\institute[SUSTech]{
+	{\normalsize Adviser: Xuejun JIANG}\\[1em]
+	{\footnotesize Department of Statistics and Data Science\\
+	The Southern University of Science and Technology}\\[1em]
+	\includegraphics[scale=0.12]{./Figures/sustech rect logo wdsd.eps}
+}
+
+\date[May 12, 2022]{\footnotesize{May 12, 2022}}
